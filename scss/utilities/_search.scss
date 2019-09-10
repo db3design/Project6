@@ -1,0 +1,30 @@
+#search {
+  display: flex;
+  margin: auto;
+  margin-top: 5%;
+  width: 35%;
+  padding: 15px;
+  border: 1.25px solid #3a3a3a;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  transition: all 1s;
+  color: white;
+  
+  &::placeholder {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    word-spacing: -1.6px;
+    line-height: 1.25;
+    color: #3a3a3a;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2.25px solid #3a3a3a;
+    background-color: #3a3a3a;
+    
+    &::placeholder {
+      color: white;
+    }
+  }
+}

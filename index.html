@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" type="text/css" href="lightcase/src/css/lightcase.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+        <input id="search" name="search" placeholder="Search our image gallery..." type="text" data-list=".img_list" autocomplete="off">
+        
+            <ul class="img_list">
+
+                <li data-name="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+                    <a href="images/01.jpg" data-rel="lightcase:myCollection" title="Hay Bales" data-lc-caption="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+                        <img src="images/thumbnails/01.jpg">
+                    </a>
+                </li>
+
+                <li data-name="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+                    <a href="images/02.jpg" data-rel="lightcase:myCollection" title="Lake" data-lc-caption="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+                        <img src="images/thumbnails/02.jpg">
+                    </a>
+                </li>
+
+                <li data-name="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+                    <a href="images/03.jpg" data-rel="lightcase:myCollection" title="Canyon" data-lc-caption="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+                        <img src="images/thumbnails/03.jpg">
+                    </a>
+                </li>
+
+                <li data-name="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
+                    <a href="images/04.jpg" data-rel="lightcase:myCollection" title="Iceberg" data-lc-caption="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
+                        <img src="images/thumbnails/04.jpg">
+                    </a>
+                </li>
+
+                <li data-name="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+                    <a href="images/05.jpg" data-rel="lightcase:myCollection" title="Desert" data-lc-caption="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+                        <img src="images/thumbnails/05.jpg">
+                    </a>
+                </li>
+
+                <li data-name="Fall is coming, I love when the leaves on the trees start to change color.">
+                    <a href="images/06.jpg" data-rel="lightcase:myCollection" title="Fall" data-lc-caption="
+                    Fall is coming, I love when the leaves on the trees start to change color.">
+                        <img src="images/thumbnails/06.jpg">
+                    </a>
+                </li>
+
+                <li data-name="I drove past this plantation yesterday, everything is so green!">
+                    <a href="images/07.jpg" data-rel="lightcase:myCollection"  title="Plantation" data-lc-caption="
+                    I drove past this plantation yesterday, everything is so green!">
+                        <img src="images/thumbnails/07.jpg">
+                    </a>
+                </li>
+
+                <li data-name="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+                    <a href="images/08.jpg" data-rel="lightcase:myCollection"  title="Dunes" data-lc-caption="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+                        <img src="images/thumbnails/08.jpg">
+                    </a>
+                </li>
+
+                <li data-name="We enjoyed a quiet stroll down this countryside lane.">
+                    <a href="images/09.jpg" data-rel="lightcase:myCollection" title="Countryside Lane" data-lc-caption="We enjoyed a quiet stroll down this countryside lane.">
+                        <img src="images/thumbnails/09.jpg">
+                    </a>
+                </li>
+
+                <li data-name="Sunset at the coast! The sky turned a lovely shade of orange.">
+                    <a href="images/10.jpg" data-rel="lightcase:myCollection" title="Sunset" data-lc-caption="Sunset at the coast! The sky turned a lovely shade of orange.">
+                        <img src="images/thumbnails/10.jpg">
+                    </a>
+                </li>
+
+                <li data-name="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+                    <a href="images/11.jpg" data-rel="lightcase:myCollection" title="Cave" data-lc-caption="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+                        <img src="images/thumbnails/11.jpg">
+                    </a>
+                </li>
+
+                <li data-name="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+                    <a href="images/12.jpg" data-rel="lightcase:myCollection" title="Bluebells" data-lc-caption="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+                        <img src="images/thumbnails/12.jpg">
+                    </a>
+                </li>
+            </ul>
+   
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="lightcase/src/js/lightcase.js"></script>
+    <script type="text/javascript" src="path/to/jquery.events.touch.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('a[data-rel^=lightcase]').lightcase();
+
+            $('a[data-rel^=lightcase]').lightcase({
+                swipe: true
+            });
+        });
+    </script>
+
+    <script src="HideSeek-master\jquery.hideseek.js"></script>
+
+    <script type="text/javascript">
+        $('#search').hideseek({
+            attribute: 'data-name'
+        });
+    </script>
+</body>
+</html>
